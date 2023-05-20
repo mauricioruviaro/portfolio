@@ -18,9 +18,8 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  justify-content: center;
-  position: relative;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 .txt-white {
@@ -38,6 +37,7 @@ main {
   flex-direction: column;
   gap: 3rem;
   justify-content: center;
+  margin: 4rem 0;
 }
 
 .image-container {
@@ -70,12 +70,11 @@ main {
 
 footer {
   align-items: center;
-  bottom: 0;
   display: flex;
   justify-content: center;
   padding: 10px;
-  position: absolute;
   width: 100vw;
+  margin-top: auto;
 }
 
 footer nav {
