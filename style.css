@@ -68,22 +68,41 @@ main {
   font-size: 1.5rem;
 }
 
-footer {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  width: 100vw;
-  margin-top: auto;
-}
-
-footer nav {
+.nav-links {
   align-items: center;
   display: flex;
   gap: .5rem;
   justify-content: center;
+  margin-top: 2rem;
+  padding: 10px;
+  width: 100%;
 }
 
 .nav-links a {
   cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  main {
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .image-container {
+    height: 200px;
+    width: 200px;
+  }
+
+  .image-container img {
+    height: 200px;
+    width: 200px;
+  }
+
+  .text-container h1 {
+    font-size: 2rem;
+  }
+
+  .nav-links {
+    margin-top: 1rem;
+  }
 }
