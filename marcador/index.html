@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Marcador</title>
+</head>
+<body>
+  <header>
+    <div class="limit-container">
+      <button type="button" class="configuracoes">
+        <img src="../images/configuracoes.png" width="35px" alt="">
+      </button>
+    </div>
+  </header>
+
+  <div class="sem-jogadores d-none">
+    <h2>Sem jogadores</h2>
+    <span>
+      Clique na engrenagem e adicione seus amigos :)
+    </span>
+  </div>
+
+  <div class="limit-container jogadores-jogo">
+  </div>
+
+  <button type="button" id="resetar" class="d-none">Resetar pontos</button>
+
+  <div class="modal d-none">
+    <div class="limit-container">
+      <h3 class="color-gray">Configurações</h3>
+      <div class="container-input">
+        <input id="nome-jogador" type="text" placeholder="Nome do jogador">
+        <button id="adicionar-jogador" type="button">Adicionar jogador</button>
+      </div>
+      <div class="container-jogadores">
+        <h4 class="color-gray">Lista de jogadores</h4>
+        <div class="jogadores">
+
+        </div>
+        <div class="container-salvar">
+          <button id="salvar" type="button">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-pontos d-none">
+    <div>
+      <span id="pontos"></span>
+      <button type="button" id="somar">+</button>
+      <button type="button" id="subtrair">-</button>
+      <button type="button" id="salvar-pontos">Salvar</button>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>

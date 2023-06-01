@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+html {
+  background-color: #22272e;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.limit-container {
+  max-width: 1280px;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+header div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+header div button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.573);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal .limit-container {
+  width: auto;
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 3px;
+}
+
+.color-gray {
+  color: #22272e;
+}
+
+.container-input {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+.container-input input {
+  height: 35px;
+  width: 260px;
+  border-radius: 2px;
+  border: 1px solid #22272e;
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+.container-input button {
+  background-color: #22272e;
+  height: 35px;
+  border: none;
+  border-radius: 2px;
+  margin-top: .5rem;
+  font-size: 16px;
+  color: #FFFFFF;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.container-jogadores {
+  margin-top: 2rem;
+}
+
+.jogadores {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  overflow-y: auto;
+}
+
+.jogadores span {
+  color: #22272e;
+}
+
+.container-salvar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.container-salvar button {
+  width: 100%;
+  height: 35px;
+  border-radius: 2px;
+  border: none;
+  background-color: #22272e;
+  color: #FFFFFF;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.jogadores-jogo {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.jogadores-jogo span {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.container-jogador-modal {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid #22272e;
+}
+
+.remover-jogador {
+  cursor: pointer;
+}
+
+.container-jogador-pontos {
+  display: flex;
+  max-width: 500px;
+  width: 100%;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+.modal-pontos {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.573);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-pontos div {
+  height: 200px;
+  width: 200px;
+  background-color: #FFFFFF;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.modal-pontos div span {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #22272e;
+  font-size: 36px;
+}
+
+.modal-pontos div button {
+  width: 100%;
+  color: #FFFFFF;
+  font-size: 18px;
+  border: none;
+  border-radius: 2px;
+  margin-top: .5rem;
+  background-color: #22272e;
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+#resetar {
+  max-width: 200px;
+  width: 100%;
+  height: 35px;
+  border: 1px solid #22272e;
+  border-radius: 2px;
+  background-color: #FFFFFF;
+  font-size: 16px;
+  font-weight: bold;
+  color: #22272e;
+  margin-top: 3rem;
+  cursor: pointer;
+}
+
+.sem-jogadores {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sem-jogadores h2 {
+  color: #FFFFFF;
+}
+
+.sem-jogadores span {
+  font-size: 16px;
+  color: #FFFFFF;
+  margin-top: .5rem;
+}
+
+.d-none {
+  display: none;
+}
+
+.eliminado {
+  color: red !important;
+}
+
+.borda-eliminado {
+  border-bottom: 1px solid red;
+}
+
+@media (max-width: 1280px) {
+  .limit-container {
+    padding: 0 20px;
+  }
+
+  header {
+    padding: 20px 0;
+  }
+}
