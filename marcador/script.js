@@ -1,17 +1,12 @@
 let lista = JSON.parse(localStorage.getItem('lista-jogadores')) || []
 let idEditando = ''
 const modal = document.querySelector('.modal')
-const modalPontos = document.querySelector('.modal-pontos')
 const nome = document.querySelector('#nome-jogador')
 const adicionar = document.querySelector('#adicionar-jogador')
 const salvar = document.querySelector('#salvar')
 const containerJogadores = document.querySelector('.jogadores')
 const botaoConfiguracoes = document.querySelector('.configuracoes')
 const jogadoresJogo = document.querySelector('.jogadores-jogo')
-const salvarPontos = document.querySelector('#salvar-pontos')
-const pontos = document.querySelector('#pontos')
-const somar = document.querySelector('#somar')
-const subtrair = document.querySelector('#subtrair')
 const resetar = document.querySelector('#resetar')
 const semPlayers = document.querySelector('.sem-jogadores')
 
@@ -26,12 +21,22 @@ const criarJogo = () => {
   if (lista.length > 0) {
     resetar.classList.remove('d-none')
     semPlayers.classList.add('d-none')
-    lista.forEach((jogador, index) => {
+    lista.forEach((jogador) => {
       const player = criarJogador(jogador.nome, `${jogador.pontos == 0 ? 'eliminado' : ''}`)
-      const pontos = criarJogador(jogador.pontos, `${jogador.pontos == 0 ? 'eliminado' : ' '}`)
+      const pontos = criarJogador(jogador.pontos, `${jogador.pontos == 0 ? 'eliminado' : ' '} pontos`)
       const container = criarContainer(`${jogador.nome} container-jogador-pontos ${jogador.pontos == 0 ? 'borda-eliminado' : ''}`)
+      const menos = document.createElement('button')
+      const mais = document.createElement('button')
+      mais.innerHTML = '+'
+      mais.classList = 'somar'
+      menos.innerHTML = '-'
+      menos.classList = 'subtrair'
+      const containerNumeros = criarContainer('container-pontos')
+      containerNumeros.appendChild(menos)
+      containerNumeros.appendChild(pontos)
+      containerNumeros.appendChild(mais)
       container.appendChild(player)
-      container.appendChild(pontos)
+      container.appendChild(containerNumeros)
       jogadoresJogo.appendChild(container)
     })
   } else {
@@ -76,27 +81,39 @@ const abrirFecharModal = (abrir) => {
   }
 }
 
-const abrirFecharModalPontos = (abrir, id) => {
-  if (abrir) {
-    modalPontos.classList.remove('d-none')
-    pontos.innerHTML = document.querySelector(`#${id}`).parentNode.lastChild.innerText
-    idEditando = id
-  } else {
-    modalPontos.classList.add('d-none')
-    id = ''
-  }
+const somarPonto = (nome) => {
+  const novaLista = lista.reduce((acc, jogador) => {
+    if (jogador.nome === nome) {
+      acc = [...acc, { ...jogador, pontos: Number(jogador.pontos) + 1 }]
+    } else {
+      acc = [...acc, jogador]
+    }
+    return acc
+  }, [])
+
+  lista = novaLista
+  localStorage.setItem('lista-jogadores', JSON.stringify(lista))
+  criarJogo()
 }
 
-const somarPonto = () => {
-  const soma = Number(pontos.innerHTML) + 1
-  pontos.innerHTML = soma
-}
+const subtrairPonto = (nome) => {
+  const novaLista = lista.reduce((acc, jogador) => {
+    if (jogador.nome === nome) {
+      console.log(jogador);
+      if (Number(jogador.pontos) > 0) {
+        acc = [...acc, { ...jogador, pontos: Number(jogador.pontos) - 1 }]
+      } else {
+        acc = [...acc, jogador]
+      }
+    } else {
+      acc = [...acc, jogador]
+    }
+    return acc
+  }, [])
 
-const subtrairPonto = () => {
-  if (Number(pontos.innerHTML) > 0) {
-    const subtracao = Number(pontos.innerHTML) - 1
-    pontos.innerHTML = subtracao
-  }
+  lista = novaLista
+  localStorage.setItem('lista-jogadores', JSON.stringify(lista))
+  criarJogo()
 }
 
 adicionar.addEventListener('click', () => {
@@ -114,42 +131,27 @@ salvar.addEventListener('click', () => {
   abrirFecharModal(false)
 })
 
-salvarPontos.addEventListener('click', () => {
-  lista = lista.reduce((acc, jogador) => {
-    if (jogador.nome === idEditando) {
-      acc = [...acc, { nome: jogador.nome, pontos: pontos.innerHTML }]
-      return acc
-    } else {
-      acc = [...acc, jogador]
-      return acc
-    }
-  }, [])
-
-  localStorage.setItem('lista-jogadores', JSON.stringify(lista))
-  criarJogo()
-  abrirFecharModalPontos(false)
-})
-
 botaoConfiguracoes.addEventListener('click', () => {
   abrirFecharModal(true)
 })
 
 document.addEventListener('click', ({ target }) => {
   if (target.classList[1] === 'remover-jogador') {
-    console.log(target.parentNode.firstChild.id);
     removerJogador(target.parentNode.firstChild.id)
   }
 })
 
 document.addEventListener('click', ({ target }) => {
-  if (target.classList[1] === 'container-jogador-pontos') {
-    abrirFecharModalPontos(true, target.classList[0])
+  if (target.className === 'somar') {
+    const jogador = target.parentNode.parentNode.classList[0]
+    somarPonto(jogador)
+  }
+
+  if (target.className === 'subtrair') {
+    const jogador = target.parentNode.parentNode.classList[0]
+    subtrairPonto(jogador)
   }
 })
-
-somar.addEventListener('click', () => somarPonto())
-
-subtrair.addEventListener('click', () => subtrairPonto())
 
 resetar.addEventListener('click', () => {
   lista = lista.reduce((acc, jogador) => {
@@ -159,7 +161,6 @@ resetar.addEventListener('click', () => {
 
   localStorage.setItem('lista-jogadores', JSON.stringify(lista))
   criarJogo()
-  abrirFecharModalPontos(false)
 })
 
 listarPlayers()
