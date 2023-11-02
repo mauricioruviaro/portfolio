@@ -1,32 +1,72 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/default.css">
     <title>Mauricio Ruviaro</title>
   </head>
   <body>
-    <main class="limit-container">
-      <div class="image-container">
-        <img src="./images/icone-perfil.jpg" alt="Foto perfil em flat design de Mauricio Ruviaro olhando para a frente, nas cores verde, roxo e branco.">
-      </div>
-      <div class="limit-container text-container">
-        <h1 class="txt-white">Mauricio Ruviaro</h1>
-        <span class="txt-white">Desenvolvedor backend</span>
-      </div>
-      <nav class="limit-container nav-links">
-        <a href="https://www.linkedin.com/in/mauricioruviaro/" target="_blank" class="txt-white">
-          <img src="./images/icons8-linkedin.svg" alt="Ícone do linkedin.">
-        </a>
-        <a href="https://github.com/mauricioruviaro" target="_blank" class="txt-white">
-          <img src="./images/icons8-github.svg" alt="Ícone do github.">
-        </a>
-        <a href="https://www.instagram.com/mauricioruviaro_/" target="_blank" class="txt-white">
-          <img src="./images/icons8-instagram.svg" alt="Ícone do instagram.">
-        </a>
+    <header class="max-width-container flex-dr flex-jbtw">
+      <aside id="about" class="flex-dc flex-as">
+        <span id="name" class="c-black">Mauricio Ruviaro</span>
+        <p id="description" class="c-black mt-2">
+          I'm a backend developer,
+          committed to creating
+          robust and scalable web
+          applications. My coding and
+          problem-solving skills drive
+          success in every project.</br>
+          <span class="fw-600">Let's code brilliance!</span>
+        </p>
+        <button type="button" class="mt-2 default-button">Message</button>
+      </aside>
+      <nav class="flex-dc flex-ae c-black">
+        <a href="#" class="default-a-tag c-black">Work</a>
+        <a href="#" class="default-a-tag c-black">Contact</a>
       </nav>
+    </header>
+    <main class="max-width-container">
+      <section id="home" class="flex-ac flex-jc flex-dc">
+        <h1 id="title" class="c-black">Backend developer</h1>
+        <span id="technologies" class="c-black">JavaScript • Tests • Python • DB</span>
+      </section>
+
+      <section id="work" class="flex-ac flex-jc flex-wrap r-gap-5 c-gap-5">
+        <div class="project-card">
+          <div class="img"></div>
+          <div class="info-container h-auto w-100 flex-ac flex-jbtw">
+            <span class="project-name">API RestFull</span>
+            <span class="project-language">JavaScript</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="img"></div>
+          <div class="info-container h-auto w-100 flex-ac flex-jbtw">
+            <span class="project-name">Encurtador de url</span>
+            <span class="project-language">JavaScript</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="img"></div>
+          <div class="info-container h-auto w-100 flex-ac flex-jbtw">
+            <span class="project-name">Pomodoro timer</span>
+            <span class="project-language">JavaScript</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="img"></div>
+          <div class="info-container h-auto w-100 flex-ac flex-jbtw">
+            <span class="project-name">Nome do projeto</span>
+            <span class="project-language">Linguagem utilizada</span>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
+
+
+Sou um desenvolvedor backend, comprometido em criar aplicações web robustas e escalonáveis. Minhas habilidades de apoio e resolução de problemas impulsionam o sucesso em todos os projetos. Vamos codificar brilhantemente!

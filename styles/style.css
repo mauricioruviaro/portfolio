@@ -1,0 +1,121 @@
+body {
+    animation: fade-in .7s;
+}
+
+header {
+    padding-top: 80px;
+}
+
+header #about #name {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    align-self: stretch;
+}
+
+header #about #description {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 340px;
+    width: 100%;
+}
+
+#home #title {
+    font-family: 'Big Shoulders Display';
+    font-size: 180px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 11.5rem;
+}
+
+#home #technologies {
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 10rem;
+}
+
+.default-a-tag {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+
+.default-button {
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: .2px;
+    font-feature-settings: 'clig' off, 'liga' off;
+    text-align: center;
+    cursor: pointer;
+}
+
+#work .project-card {
+    width: 521px;
+    height: 394px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 16px;
+    border: 1px solid rgba(101, 101, 101, 0.20);
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px 0px rgba(101, 101, 101, 0.20);
+}
+
+#work .project-card .img {
+    width: 489px;
+    height: 323px;
+    border-radius: 8px;
+    background-color: #F8F5F5;
+}
+
+#work .project-card .info-container .project-name {
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+}
+
+#work .project-card .info-container .project-language {
+    color: #9316F4;
+    text-align: right;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
