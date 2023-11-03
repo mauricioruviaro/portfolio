@@ -10,6 +10,7 @@
 
 html {
     font-size: 12px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -99,14 +100,6 @@ body {
 
 .w-100 {
     width: 100%;
-}
-
-.r-gap-5 {
-    row-gap: 5rem;
-}
-
-.c-gap-5 {
-    column-gap: 5rem;
 }
 
 .max-width-container {
