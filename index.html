@@ -1,32 +1,101 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/default.css">
     <title>Mauricio Ruviaro</title>
   </head>
   <body>
-    <main class="limit-container">
-      <div class="image-container">
-        <img src="./images/icone-perfil.jpg" alt="Foto perfil em flat design de Mauricio Ruviaro olhando para a frente, nas cores verde, roxo e branco.">
-      </div>
-      <div class="limit-container text-container">
-        <h1 class="txt-white">Mauricio Ruviaro</h1>
-        <span class="txt-white">Desenvolvedor backend</span>
-      </div>
-      <nav class="limit-container nav-links">
-        <a href="https://www.linkedin.com/in/mauricioruviaro/" target="_blank" class="txt-white">
-          <img src="./images/icons8-linkedin.svg" alt="Ícone do linkedin.">
-        </a>
-        <a href="https://github.com/mauricioruviaro" target="_blank" class="txt-white">
-          <img src="./images/icons8-github.svg" alt="Ícone do github.">
-        </a>
-        <a href="https://www.instagram.com/mauricioruviaro_/" target="_blank" class="txt-white">
-          <img src="./images/icons8-instagram.svg" alt="Ícone do instagram.">
-        </a>
+    <header id="home" class="max-width-container flex-dr flex-jbtw">
+      <aside id="about" class="flex-dc flex-as">
+        <span id="name">Mauricio Ruviaro</span>
+        <p id="description" class="mt-2">
+          I'm a backend developer, committed to
+          creating robust and scalable web applications.
+          My coding and problem-solving skills drive
+          success in every project. <span class="fw-600">Let's code brilliance!</span>
+        </p>
+        <button type="button" class="mt-2 default-button">Message</button>
+      </aside>
+      <nav class="flex-dc flex-ae c-black">
+        <a href="#home" class="default-a-tag">Home</a>
+        <a href="#contact" class="default-a-tag">Contact</a>
       </nav>
+    </header>
+    <main class="max-width-container">
+      <section id="home" class="flex-ac flex-jc flex-dc">
+        <h1 id="title">Backend developer</h1>
+        <span id="technologies">Language • Language • Language • Language • Language</span>
+      </section>
+
+      <section id="work">
+        <div class="project-card">
+          <div style="height: 589px;" class="img">
+            <img src="./images/hackerrank.png" />
+          </div>
+          <div class="info-container">
+            <span class="project-name">Project name 1</span>
+            <span class="project-language">Language</span>
+            <div class="date-tag">
+              <span>Ago 2023</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div style="height: 343px;" class="img">
+            <div class="glass"></div>
+            <img src="./images/portfolio.png" />
+          </div>
+          <div class="info-container">
+            <span class="project-name">Project name 1</span>
+            <span class="project-language">Language</span>
+            <div class="date-tag">
+              <span>Ago 2023</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div style="height: 589px;" class="img">
+            <img src="./images/w3schools.png" />
+          </div>
+          <div class="info-container">
+            <span class="project-name">Project name 1</span>
+            <span class="project-language">Language</span>
+            <div class="date-tag">
+              <span>Ago 2023</span>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="project-card">
+          <div style="height: 327px;" class="img"></div>
+          <div class="info-container">
+            <span class="project-name">Project name 1</span>
+            <span class="project-language">Language</span>
+            <div class="date-tag">
+              <span>Ago 2023</span>
+            </div>
+          </div> -->
+        </div>
+        <p id="background-text" class="bg-backend">Backend developer</p>
+      </section>
     </main>
+
+    <a id="click-here" href="https://twitter.com/simsoueuneh" target="_blank">(click here) send me a DM</a>
+
+    <footer id="contact" class="w-100 flex-ac flex-jc">
+      <div id="container-footer-data" class="max-width-container flex-dr flex-jbtw">
+        <span id="footer-text">WORKING REMOTELY. CURRENTLY IN  SANTA CATARINA, BRAZIL 🇧🇷</span>
+        <nav id="footer-nav">
+          <a href="https://github.com/mauricioruviaro" target="_blank">GITHUB</a>
+          <a href="https://www.instagram.com/mauricioruviaro_" target="_blank">INSTAGRAM</a>
+          <a href="https://www.linkedin.com/in/mauricioruviaro" target="_blank">LINKEDIN</a>
+          <a href="https://twitter.com/simsoueuneh" target="_blank">X</a>
+        </nav>
+      </div>
+    </footer>
+    <script src="./scripts/script.js"></script>
   </body>
 </html>

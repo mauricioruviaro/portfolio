@@ -1,0 +1,489 @@
+body {
+  animation: fade-in 0.7s;
+}
+
+header {
+  padding-top: 80px;
+}
+
+header #about #name {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  align-self: stretch;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: #262626;
+}
+
+header #about #description {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 560px;
+  width: 100%;
+  color: #262626;
+}
+
+#home #title {
+  font-family: "Big Shoulders Display";
+  color: #262626;
+  font-size: 180px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 11.5rem;
+}
+
+#home #technologies {
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: #434343;
+}
+
+.default-a-tag {
+  color: #8c8c8c;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.selected-a-tag {
+  font-weight: 700;
+  text-decoration-line: underline;
+  color: #531dab;
+}
+
+.default-button {
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #262626;
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  font-feature-settings: "clig" off, "liga" off;
+  text-align: center;
+  cursor: pointer;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: #262626;
+}
+
+#work {
+  position: relative;
+  padding: 10rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+
+#work .project-card {
+  max-width: 397px;
+  min-width: 275px;
+  width: 100%;
+  height: min-content;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 16px;
+  border: 1px solid rgba(101, 101, 101, 0.2);
+  background: #ffffff;
+  box-shadow: 0px 0px 10px 0px rgba(101, 101, 101, 0.2);
+  cursor: pointer;
+  position: relative;
+}
+
+.date-tag {
+  height: 24px;
+  padding: 4px 12px;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  background-color: #ffffff;
+  border-radius: 50px;
+  border: 1px solid rgba(101, 101, 101, 0.2);
+}
+
+.date-tag span {
+  color: #434343;
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+}
+
+#work .project-card .img {
+  /* max-width: 397px;
+  min-width: 275px; */
+  max-width: 365px;
+  width: 100%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+#work .project-card .img .glass {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #9254de40;
+}
+
+#work .project-card .img img {
+  height: 100%;
+}
+
+#work .project-card .info-container {
+  height: 30px;
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+#work .project-card .info-container .project-name {
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 10px;
+  letter-spacing: 0.2px;
+}
+
+#work .project-card .info-container .project-language {
+  color: #9254de;
+  text-align: right;
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 10px;
+  letter-spacing: 0.2px;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+#background-text {
+  top: 0;
+  color: #f5f5f5;
+  text-align: center;
+  font-family: "Big Shoulders Display";
+  font-size: 200px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  pointer-events: none;
+  user-select: none;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+
+#click-here {
+  margin: 50px 0;
+  color: var(--gray-gray-10, #262626);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%;
+}
+
+footer {
+  background-color: #fbfbfb;
+  height: 114px;
+}
+
+footer #container-footer-data #footer-text {
+  color: var(--gray-gray-10, #262626);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+footer #container-footer-data #footer-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 2rem;
+}
+
+footer #container-footer-data #footer-nav a {
+  color: var(--gray-gray-10, #262626);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+@media only screen and (max-width: 1288px) {
+  #home, #contact {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media only screen and (max-width: 1140px) {
+  #home #title, #work .bg-backend {
+    font-size: 174px;
+  }
+}
+
+@media only screen and (max-width: 1095px) {
+  #home #title, #work .bg-backend {
+    font-size: 154px;
+  }
+}
+
+@media only screen and (max-width: 978px) {
+  #home #title, #work .bg-backend {
+    font-size: 144px;
+  }
+
+  #contact #footer-text {
+    width: 360px;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  #work {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+}
+
+@media only screen and (max-width: 917px) {
+  #home #title, #work .bg-backend {
+    font-size: 124px;
+  }
+
+  #home #technologies {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 799px) {
+  #home #title, #work .bg-backend {
+    font-size: 104px;
+  }
+
+  #home #title {
+    margin-top: 5rem;
+  }
+
+  #work {
+    padding: 5rem 2rem;
+  }
+
+  #click-here {
+    margin: 25px 0;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #home {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  #home #about #name {
+    font-size: 22px;
+  }
+
+  #home #about #description {
+    font-size: 18px;
+    width: 413px;
+  }
+
+  .selected-a-tag img {
+    display: none;
+  }
+
+  .default-a-tag {
+    font-size: 14px;
+  }
+
+  .default-button {
+    font-size: 14px;
+  }
+
+  /* #home #title, #work .bg-backend {
+    font-size: 174px;
+  }
+
+  #home #technologies {
+    font-size: 18px;
+  } */
+
+  .project-name {
+    font-size: 14px;
+  }
+
+  .project-language {
+    font-size: 8px;
+  }
+
+  #click-here {
+    font-size: 14px;
+  }
+
+  #contact #container-footer-data #footer-text {
+    font-size: 14px;
+    width: 250px;
+  }
+
+  #contact #container-footer-data nav a {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  #home #title, #work .bg-backend {
+    font-size: 94px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #contact #container-footer-data {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  #contact #container-footer-data #footer-text {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  #contact #container-footer-data nav a {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 636px) {
+  #work {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media only screen and (max-width: 625px) {
+  #home #title, #work .bg-backend {
+    font-size: 84px;
+  }
+}
+
+@media only screen and (max-width: 562px) {
+  #home #title {
+    margin-top: 2.5rem;
+  }
+
+  #home #title, #work .bg-backend {
+    font-size: 74px;
+  }
+
+  #home #technologies {
+    font-size: 14px;
+  }
+
+  #work {
+    padding: 2.5rem 1rem 0;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  #home {
+    width: 100%;
+    padding: 1rem;
+    flex-direction: column;
+  }
+
+  #home #title {
+    margin-top: 1rem;
+  }
+
+  #home nav {
+    display: none;
+  }
+
+  #home #about #name {
+    font-size: 22px;
+    width: 100%;
+    text-align: center;
+  }
+
+  #home #about #description {
+    font-size: 18px;
+    width: 413px;
+    margin: 1rem auto 0;
+    text-align: center;
+  }
+
+  #home #about button {
+    margin: 1rem auto 0;
+  }
+
+  .selected-a-tag img {
+    display: none;
+  }
+
+  .default-a-tag {
+    font-size: 14px;
+  }
+
+  .default-button {
+    font-size: 14px;
+  }
+
+  .project-name {
+    font-size: 14px;
+  }
+
+  .project-language {
+    font-size: 8px;
+  }
+
+  #click-here {
+    font-size: 14px;
+  }
+
+  #contact #container-footer-data #footer-text {
+    font-size: 14px;
+    width: 250px;
+  }
+
+  #contact #container-footer-data nav a {
+    font-size: 14px;
+  }
+}
